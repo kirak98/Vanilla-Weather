@@ -1,5 +1,14 @@
 body {
     font-family: sans-serif;
+    background: linear-gradient(
+    0deg,
+    rgb(183, 217, 250) 37%,
+    rgb(183, 217, 250) 52%,
+    rgb(183, 217, 250) 52%,
+    rgb(145, 161, 182) 100%
+  );
+    background-attachment: fixed;
+ 
   }
   .container {
     max-width: 700px;
@@ -8,4 +17,32 @@ body {
     border-radius: 10px;
     margin: 10px auto;
   }
-  
+  .mb-3 {
+    margin: 0 20px;
+    padding: 0 0 20px;
+    text-align: right;
+    border-radius: 5px;
+  }
+  .form-control {
+    border: #1b4de3;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+  }
+  .btn {
+    background-color: #1b4de3;
+    border: #1b4de3;
+    border-radius: 20px;
+    padding: 8px;
+    color: #fff;
+    transition: all 150ms ease-in-out;
+  }
+  .btn:hover {
+    background: #96b6e9;
+    cursor: pointer;
+  }
+  h1 {  text-align: left;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 48px;
+     color: #fff;
+  }
