@@ -18,3 +18,27 @@ let days = [
 let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`;
 }
+
+function displayTemperature() {
+    let temperatureElement = document.querySelector("#temperature");
+    let cityElement = document.querySelector("#city");
+    let descriptionElement = document.querySelector("#description");
+    let humidityElement = document.querySelector("#humidity");
+    let windElement = document.querySelector("#wind");
+    let dateElement = document.querySelector("#date");
+    let iconElement = document.querySelector("#icon");
+
+    celsiusTemperature = response.data.main.temp;
+
+temperatureElement.innerHTML = Math.round(celsiusTemperature);
+cityElement.innerHTML = response.data.name;
+descriptionElement.innerHTML = response.data.weather[0].description;
+humidityElement.innerHTML = response.data.main.humidity;
+windElement.innerHTML= Math.round(response.data.wind.speed *3.6);
+dateElement.innerHTML = formatDate(response.data.dt * 1000);
+iconElement.setAttribute("src", );
+
+iconElement.setAttribute("alt", response.data.weather[0].description);
+}
+
+
