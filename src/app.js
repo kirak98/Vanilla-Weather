@@ -36,7 +36,7 @@ descriptionElement.innerHTML = response.data.weather[0].description;
 humidityElement.innerHTML = response.data.main.humidity;
 windElement.innerHTML= Math.round(response.data.wind.speed *3.6);
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
-iconElement.setAttribute("src", );
+iconElement.setAttribute("src", `https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition[0].icon}.png` );
 
 iconElement.setAttribute("alt", response.data.weather[0].description);
 }
@@ -44,11 +44,11 @@ iconElement.setAttribute("alt", response.data.weather[0].description);
 function search(city) {
     let apiKey ="f1cc8436d5e8084ob3affafba54dtceb";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-    axious.get(apiUrl).then(displayTemperature);
+    axios.get(apiUrl).then(displayTemperature);
 }
 function handleSubmit(event) {
     event.preventDefault();
-    let cityInputElement = document.querySelector("#city-input");
+    let cityInputElement = document.querySelector("#search-city-input");
     search(cityInputElement.value);
 }
 
