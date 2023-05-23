@@ -48,7 +48,7 @@ function search(city) {
 }
 function handleSubmit(event) {
     event.preventDefault();
-    let cityInputElement = document.querySelector("#search-city-input");
+    let cityInputElement = document.querySelector("#search-text-input");
     search(cityInputElement.value);
 }
 
