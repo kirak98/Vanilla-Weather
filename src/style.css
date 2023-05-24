@@ -71,11 +71,13 @@ body {
   .weather-temperature .units {
     font-size: 26px;
     top: -34px;
+    text-decoration: none;
   }
   
   .weather-temperature .active {
     color: #fff;
     cursor: default;
+    text-decoration: none;
   }
   
   .weather-temperature .active:hover {
