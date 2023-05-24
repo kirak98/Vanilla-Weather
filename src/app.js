@@ -46,6 +46,7 @@ function formatDate(timestamp) {
             forecastDay.condition.icon
           }.png"
           alt="" id="forecast-icon"
+          class= "forecast-icon"
           width="80"
         />
         <div class="weather-forecast-temperatures">
