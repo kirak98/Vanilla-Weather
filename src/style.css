@@ -90,12 +90,12 @@ body {
 
   .weather-forecast {
     text-align: center;
-    color: #fff;
+    color: #5f6770;
   }
 
   .weather-forecast-date {
     font-size: 16px;
-    color: #7d8fa3;
+    color: #5f6770;
   }
   
   .weather-forecast-temperature-min {

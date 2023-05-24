@@ -46,7 +46,7 @@ function formatDate(timestamp) {
             forecastDay.condition.icon
           }.png"
           alt="" id="forecast-icon"
-          width="70"
+          width="80"
         />
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max"> ${Math.round(forecastDay.temperature.maximum)}°</span>
