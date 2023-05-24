@@ -46,7 +46,7 @@ function formatDate(timestamp) {
             forecastDay.condition.icon
           }.png"
           alt="" id="forecast-icon"
-          width="42"
+          width="70"
         />
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max"> ${Math.round(forecastDay.temperature.maximum)}°</span>
@@ -59,7 +59,6 @@ function formatDate(timestamp) {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
 }
 
 function getForecast(coordinates) {
@@ -96,7 +95,7 @@ function getForecast(coordinates) {
       let apiKey ="f1cc8436d5e8084ob3affafba54dtceb";
       let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
       axios.get(apiUrl).then(displayTemperature);
-      console.log(apiUrl);
+  
       
   }
   function handleSubmit(event) {
