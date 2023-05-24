@@ -31,8 +31,8 @@ body {
     border-radius: 5px;
   }
   .btn {
-    background-color: #1b4de3;
-    border: #1b4de3;
+    background-color: #005885;
+    border: #005885;
     border-radius: 20px;
     padding: 8px;
     color: #fff;
@@ -58,11 +58,18 @@ body {
     margin: 0 10px;
     padding: 0;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
+
+  }
+  .temp {
+    font-size: 26px;
+    color:#fff;
+    margin: 0 5px;
+    padding: 0;
 
   }
   .weather-temperature .units {
-    font-size: 16px;
+    font-size: 26px;
     top: -34px;
   }
   
@@ -73,5 +80,17 @@ body {
   
   .weather-temperature .active:hover {
     text-decoration: none;
+  }
+  .card {
+    margin: 0 20px;
+    padding: 20 20px;
+    border: 0;
+    border-radius: 10px;
+    background: #005885;
+  }
+  .card-header {
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
   }
   
