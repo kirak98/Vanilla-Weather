@@ -63,7 +63,6 @@ function formatDate(timestamp) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey ="f1cc8436d5e8084ob3affafba54dtceb";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
@@ -106,33 +105,16 @@ function getForecast(coordinates) {
       search(cityInputElement.value);
   }
   
-  function displayFahrenheitTemperature(event) {
-      event.preventDefault();
-      let temperatureElement = document.querySelector("#temperature");
-  
-      celsiusLink.classList.remove("active");
-      fahrenheitLink.classList.add("active");
-      let fahrenheitTemperature =(celsiusTemperature * 9) / 5 + 32;
-      temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  }
-  
+ 
   function displayCelsiusTemperature (event) {
       event.preventDefault();
-      celsiusLink.classList.add("active");
-      fahrenheitLink.classList.remove("active");
       let temperatureElement = document.querySelector("#temperature");
       temperatureElement.innerHTML = Math.round(celsiusTemperature);
   }
   
-  let celsiusTemperature = null;
   
   let form = document.querySelector("#search-form");
   form.addEventListener("submit", handleSubmit);
   
-  let fahrenheitLink = document.querySelector("#fahrenheit-link");
-  fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-  
-  let celsiusLink = document.querySelector("#celsius-link");
-  celsiusLink.addEventListener("click", displayCelsiusTemperature);
   
   search("Barcelona");
